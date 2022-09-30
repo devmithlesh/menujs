@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Options</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navigation" onclick="myFunction()">
+      <div class="toggle"><span></span></div>
+      <ul class="navbar">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact us</a></li>
+        <li><a href="#">Absout us</a></li>
+      </ul>
+    </div>
+    <script>
+      let navigation = document.querySelector(".navigation");
+      document.querySelector(".toggle").onclick = function () {
+        this.classList.toggle("active");
+        navigation.classList.toggle("active");
+      };
+      function myFunction() {
+        var x = document.querySelector("ul");
+        if (x.style.display === "block") {
+          x.style.display = "none";
+        } else {
+          x.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
